@@ -25,10 +25,16 @@ function onSubmit(e) {
         createBtn(li);
         /// clear fields
         nameInput.value = '';
-
     }
-
 }
+
+// add list when pressed enter
+document.addEventListener('keyup', (event) => {
+    if(event.keyCode == 13) {
+        onSubmit();
+    }
+  });
+
 
 btnRem.addEventListener('click', onRemove);
 
