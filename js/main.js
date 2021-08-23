@@ -29,9 +29,10 @@ function onSubmit(e) {
 }
 
 // add list when pressed enter
-document.addEventListener('keyup', (event) => {
-    if(event.keyCode == 13) {
+myForm.addEventListener('keypress', function(event)  {
+    if(event.key === 'Enter') {
         onSubmit();
+        console.log('enter pressed')
     }
   });
 
